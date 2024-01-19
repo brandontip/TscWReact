@@ -15,6 +15,7 @@ export default function NewGoal({onAddGoal}: NewGoalProps) {
         const enteredDescription = description.current!.value;
         onAddGoal(enteredGoal,enteredDescription);
         console.log(enteredGoal, enteredDescription);
+        event.currentTarget.reset();
     }
 
     return (<form onSubmit={submitHandler}>
